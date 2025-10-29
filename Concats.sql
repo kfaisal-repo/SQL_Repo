@@ -1,6 +1,6 @@
 SELECT
-'00' || EmployeeID as ID,
-LastName ||', '||FirstName as Name,
+LPAD(EmployeeID,5,0) as ID,
+CONCAT(LastName,', ',FirstName) as Name,
 LOWER(SUBSTR(FirstName,1,1)) || LOWER(SUBSTR(LastName,1,7)) as Login,
 Username || '@nadias-garden.com' as Email
 FROM Employees
